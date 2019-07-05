@@ -1,0 +1,24 @@
+### CLIENT SIDE ###
+front/.DS_Store
+front/node_modules
+front/dist
+front/.env.local
+front/.env.*.local
+front/npm-debug.log*
+front/yarn-debug.log*
+front/yarn-error.log*
+
+### SERVER SIDE ###
+back/.bundle
+back/db/*.sqlite3
+back/db/*.sqlite3-journal
+back/log/*
+back/tmp/*
+!back/log/.keep
+!back/tmp/.keep
+back/.byebug_history
+back/public/system
+/back/log
+/back/tmp
+back/Gemfile.lock
+/back/Gemfile.lock
