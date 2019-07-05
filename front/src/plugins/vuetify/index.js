@@ -5,7 +5,8 @@
 // Lib imports
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
-import 'vuetify/src/stylus/app.styl'
+
+import './app-theme.styl'
 
 Vue.use(Vuetify, {
   options: {
@@ -17,7 +18,7 @@ Vue.use(Vuetify, {
     'primary-variant': '#113dab',
     secondary: '#6b34d3',
     'secondary-light': '#b79de9',
-    'secondary-variant': '##5127c4',
+    'secondary-variant': '#5127c4',
     accent: '#00d4b7',
     'accent-light': '#53f2e2',
     'accent-variant': '#00b294',

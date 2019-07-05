@@ -1,9 +1,10 @@
 {
   "name": "front",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "rykn0wxx <raurici666@gmail.com>",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port=8181",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -30,8 +31,16 @@
     "sass-loader": "^7.1.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "tailwindcss": "^1.0.4",
+    "vue-cli-plugin-modular-router": "^1.1.1",
+    "vue-cli-plugin-modular-vuex": "^0.15.2",
     "vue-cli-plugin-vuetify": "^0.5.0",
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.0.5"
-  }
+  },
+  "keywords": [
+    "front",
+    "frontend"
+  ],
+  "license": "MIT"
 }

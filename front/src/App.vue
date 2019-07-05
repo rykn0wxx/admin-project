@@ -1,11 +1,14 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
         <span class="font-weight-light">MATERIAL DESIGN</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn flat to="/landing">Landing</v-btn>
+      <v-btn flat to="/home">Home</v-btn>
+      <v-btn flat to="/about">About</v-btn>
       <v-btn
         flat
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -23,7 +26,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
   data () {
@@ -33,3 +35,5 @@ export default {
   }
 }
 </script>
+
+<style src="./assets/css/tailwind.css"></style>
