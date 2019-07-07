@@ -20,11 +20,12 @@
                     <v-layout column>
                       <v-flex>
                         <v-text-field
-                          :rules="rules.auth.login"
-                          ref="auth.login"
-                          v-model="auth.login"
+                          :rules="rules.user.email"
+                          ref="user.email"
+                          v-model="user.email"
                           dark box clearable required
-                          label="Login"
+                          label="Email"
+                          type="email"
                           height="46"
                           browser-autocomplete="off"
                           validate-on-blur
@@ -33,11 +34,25 @@
                       </v-flex>
                       <v-flex>
                         <v-text-field
-                          :rules="rules.auth.password"
-                          ref="auth.password"
-                          v-model="auth.password"
+                          :rules="rules.user.password"
+                          ref="user.password"
+                          v-model="user.password"
                           dark box clearable required
                           label="Password"
+                          type="password"
+                          height="46"
+                          browser-autocomplete="off"
+                          validate-on-blur
+                          color="primary-light">
+                        </v-text-field>
+                      </v-flex>
+                      <v-flex>
+                        <v-text-field
+                          :rules="rules.user.password_confirmation"
+                          ref="user.password_confirmation"
+                          v-model="user.password_confirmation"
+                          dark box clearable required
+                          label="Password Confirmation"
                           type="password"
                           height="46"
                           browser-autocomplete="off"
@@ -69,6 +84,7 @@
 </template>
 
 <script>
+const EMAIL_REGXP = /^(|(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6})$/
 export default {
   name: 'AuthsRegister',
   data () {
@@ -77,20 +93,42 @@ export default {
         valid: false,
         sending: false
       },
-      auth: {
-        login: '',
-        password: ''
+      user: {
+        email: '',
+        username: '',
+        password: '',
+        password_confirmation: ''
       },
       rules: {
-        auth: {
-          login: [
+        user: {
+          email: [
+            v => !!v || `This field is required`,
+            v => EMAIL_REGXP.test(v) || 'Please enter a valid email address'
+          ],
+          username: [
             v => !!v || `This field is required`,
             v => (v || '').length >= 2 || `Invalid character length, minimum required 2`
           ],
           password: [
             v => !!v || `This field is required`,
-            v => (v || '').length >= 2 || `Invalid character length, minimum required 2`
+            v => (v || '').length >= 6 || `Invalid character length, minimum required 6`
+          ],
+          password_confirmation: [
+            v => !!v || `This field is required`,
+            v => v === this.user.password || 'Password does not match'
           ]
+        }
+      }
+    }
+  },
+  methods: {
+    async submitForm () {
+      if (this.$refs.form.validate()) {
+        try {
+          const userResponse = await this.$firebase.auth().createUserWithEmailAndPassword(this.user.email, this.user.password)
+          console.log(userResponse)
+        } catch (err) {
+          console.error(`Something went wrong, ${err}`)
         }
       }
     }

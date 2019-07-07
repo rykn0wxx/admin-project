@@ -20,11 +20,12 @@
                     <v-layout column>
                       <v-flex>
                         <v-text-field
-                          :rules="rules.auth.login"
-                          ref="auth.login"
-                          v-model="auth.login"
+                          :rules="rules.auth.email"
+                          ref="auth.email"
+                          v-model="auth.email"
                           dark box clearable required
-                          label="Login"
+                          label="Email"
+                          type="email"
                           height="46"
                           browser-autocomplete="off"
                           validate-on-blur
@@ -69,6 +70,7 @@
 </template>
 
 <script>
+const EMAIL_REGXP = /^(|(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6})$/
 export default {
   name: 'AuthsLogin',
   data () {
@@ -78,19 +80,31 @@ export default {
         sending: false
       },
       auth: {
-        login: '',
+        email: '',
         password: ''
       },
       rules: {
         auth: {
-          login: [
+          email: [
             v => !!v || `This field is required`,
-            v => (v || '').length >= 2 || `Invalid character length, minimum required 2`
+            v => EMAIL_REGXP.test(v) || 'Please enter a valid email address'
           ],
           password: [
             v => !!v || `This field is required`,
-            v => (v || '').length >= 2 || `Invalid character length, minimum required 2`
+            v => (v || '').length >= 6 || `Invalid character length, minimum required 6`
           ]
+        }
+      }
+    }
+  },
+  methods: {
+    async submitForm () {
+      if (this.$refs.form.validate()) {
+        try {
+          const userResponse = await this.$firebase.auth().signInWithEmailAndPassword(this.auth.email, this.auth.password)
+          console.log(userResponse)
+        } catch (err) {
+          console.error(`Something went wrong, ${err}`)
         }
       }
     }

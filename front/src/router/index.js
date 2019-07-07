@@ -27,6 +27,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   // const isOffline = store.getters['app/IS_OFFLINE']
   // const isAuthenticated = store.getters['users/IS_LOGGEDIN']
+  // console.log('from router gurard', Vue.prototype)
   const isOffline = true
   const isAuthenticated = true
   if (to.meta.public) {
