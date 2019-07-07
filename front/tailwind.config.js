@@ -50,10 +50,10 @@ module.exports = {
         dp03: '#2a2b2e',
         dp04: '#2d2e30',
         dp06: '#313235',
-        dp08: '#313235',
-        dp12: '#313235',
+        dp08: '#343538',
+        dp12: '#39393c',
         dp16: '#3a3b3e',
-        dp24: '#3a3b3e'
+        dp24: '#3d3e40'
       },
       on: {
         light: '#ECF0F1',
@@ -65,6 +65,15 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px'
+    },
+    flex: {
+      '1': '1',
+      none: '0 0 auto',
+      initial: '0 1 auto',
+      auto: '1 1 auto',
+      grow: '1 1 100%',
+      nogrow: '0 1 auto',
+      noshrink: '1 0 auto'
     }
   },
   variants: {},

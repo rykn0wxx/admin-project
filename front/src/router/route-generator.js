@@ -1,9 +1,11 @@
 let routeIndex = 0
 
 export default function routeGenerator (pathObj) {
+  const { name, path, icon } = pathObj
   const routes = {
-    name: pathObj.name,
-    path: pathObj.path,
+    name,
+    path,
+    icon,
     meta: pathObj.meta ? pathObj.meta : { public: false },
     component: (resolve) => import(`@/views/${pathObj.view}.vue`).then(resolve)
   }

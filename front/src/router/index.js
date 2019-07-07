@@ -15,6 +15,7 @@ import routeGenerator from './route-generator'
 const appRoutes = routerPaths.map(path => routeGenerator(path)).concat([{ path: '*', redirect: '/landing' }])
 
 Vue.use(Router)
+
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,

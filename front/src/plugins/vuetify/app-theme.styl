@@ -5,17 +5,17 @@
 // ============================================================
 
 $primary = {
-  primary: #264fc1,
+  base: #264fc1,
   light: #9aa7e0,
   dark: #113dab
 }
 $secondary = {
-  primary: #6b34d3,
+  base: #6b34d3,
   light: #b79de9,
   dark: #5127c4
 }
 $accent = {
-  primary: #00d4b7,
+  base: #00d4b7,
   light: #53f2e2,
   dark: #00b294
 }
@@ -113,86 +113,4 @@ $font-size-root = 14px
 $line-height-root = 1.4
 
 @import '~vuetify/src/stylus/main'
-
-::-webkit-scrollbar
-  width: 10px !important
-  height: 10px !important
-  border-radius: 10px !important
-  &-corner
-    background-color: #23252e !important
-  &-track
-    background-color: #23252e !important
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
-  &-thumb
-    background: rgba(112, 122, 140, 1)
-    border-radius: 10px !important
-    cursor: pointer !important
-    outline: 1px solid slategrey
-
-html
-  &.rykn0wxx
-    line-height: 1.4
-    box-sizing: border-box
-    *, *::before, *::after
-      box-sizing: border-box
-    &.no-sb
-      overflow: unset
-    [tabindex='-1']:focus
-      outline: none
-    select, button, textarea, input
-      vertical-align: baseline
-    input[type="reset"], input[type="submit"], input[type="button"], button
-      cursor: pointer
-      -webkit-appearance: button
-      &[disabled]
-        cursor: default
-    textarea
-      vertical-align: top
-      overflow: auto
-    input
-      &[type="search"]
-        -webkit-appearance: textfield
-        box-sizing: content-box
-        -webkit-box-sizing: content-box
-        &::-webkit-search-decoration, &::-webkit-search-cancel-button
-          -webkit-appearance: none
-      &:-webkit-autofill
-        text-shadow: none
-
-.rykn0wxx, .mudhead
-  text-rendering: optimizeLegibility
-  height: 100%
-  position: relative
-  [v-cloak], [data-v-cloak], [x-v-cloak]
-    display: none !important
-
-.mudhead
-  margin: 0
-  padding: 0
-
-html.rykn0wxx, body.mudhead
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
-  -webkit-touch-callout: none
-  min-height: 100%
-  -webkit-text-size-adjust: 100%
-  -ms-text-size-adjust: 100%
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
-.rykn0wxx
-  h1, h1, h3, h4, h5, h6
-    line-height: 1.2
-    color: inherit
-    font-weight: 400
-  &, button, select, textarea, input
-    font-family: $body-font-family
-  select, button, textarea, input
-    font-size: 100%
-  a
-    text-decoration: none
-    &:focus, &:active
-      outline: none
-
-[data-vue-meta='is-landing']
-  &, .mudhead
-    height 100%
+@import './_overrides.styl'

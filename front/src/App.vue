@@ -1,36 +1,13 @@
 <template>
-  <v-app dark>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn flat to="/landing">Landing</v-btn>
-      <v-btn flat to="/home">Home</v-btn>
-      <v-btn flat to="/about">About</v-btn>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
-    </v-toolbar>
-
-    <v-content>
-      <router-view/>
-    </v-content>
-  </v-app>
+  <RouterView class="app tw-antialiased" v-cloak />
 </template>
 
 <script>
 export default {
   name: 'App',
-  data () {
+  metaInfo () {
     return {
-      //
+      title: 'Frontend by mudhead'
     }
   }
 }
