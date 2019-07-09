@@ -1,0 +1,50 @@
+.rykn0wxx {
+  .md-display {
+    &-4 {
+      font-size: $display-4-font-size-base;
+      line-height: $display-4-font-size-base;
+      letter-spacing: -0.010em;
+      font-weight: 300;
+    }
+    &-3 {
+      font-size: $display-3-font-size-base;
+      line-height: $display-3-font-size-base;
+      letter-spacing: -0.005em;
+      font-weight: 400;
+    }
+    &-2 {
+      font-size: $display-2-font-size-base;
+      line-height: rem(6.4);
+      font-weight: 400;
+    }
+    &-1 {
+      font-size: $display-1-font-size-base;
+      line-height: rem(4);
+      font-weight: 400;
+    }
+  }
+  .md-headline {
+    font-size: $headline-font-size-base;
+    line-height: rem(3.2);
+    font-weight: 400;
+  }
+  .md-title {
+    @include md-title();
+  }
+  .md-subhead {
+    @include md-subhead();
+  }
+  .md-body-1 {
+    @include md-body-1();
+  }
+  .md-body-2 {
+    @include md-body-2();
+  }
+  .md-caption {
+    font-size: $caption-font-size-base;
+    letter-spacing: 0.020em;
+  }
+  .md-button, button, .btn {
+    letter-spacing: 0.010em;
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app clipped-left class="app-toolbar">
+  <v-toolbar app clipped-left class="app-toolbar glow-z1">
     <v-toolbar-side-icon @click.stop></v-toolbar-side-icon>
     <v-toolbar-title>
       <v-breadcrumbs :items="breadItems">

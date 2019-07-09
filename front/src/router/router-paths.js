@@ -39,5 +39,18 @@ export default [
         icons: 'contacts'
       }
     ]
+  }, {
+    path: '/boards',
+    name: 'Boards',
+    view: 'layouts/Boards',
+    redirect: '/allboards',
+    children: [
+      {
+        path: '/allboards',
+        name: 'AllBoards',
+        view: 'boards/AllBoards',
+        icon: 'dashboard'
+      }
+    ]
   }
 ]

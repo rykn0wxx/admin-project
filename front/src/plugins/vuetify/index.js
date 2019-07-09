@@ -28,6 +28,16 @@ Vue.use(Vuetify, {
     warning: '#FFAB00',
     background: '#18191c',
     onlight: '#ECF0F1',
-    ondark: '#050709'
+    ondark: '#050709',
+    surface: '#303033',
+    'surface-dp01': '#242528',
+    'surface-dp02': '#28292c',
+    'surface-dp03': '#2a2b2e',
+    'surface-dp04': '#2d2e30',
+    'surface-dp06': '#313235',
+    'surface-dp08': '#343538',
+    'surface-dp12': '#39393c',
+    'surface-dp16': '#3a3b3e',
+    'surface-dp24': '#3d3e40'
   }
 })

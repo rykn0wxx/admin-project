@@ -6,12 +6,13 @@
 import Vue from 'vue'
 
 // Application plugins
+import '@/sass/app.scss'
 import '@/plugins/vuetify'
 import { sync } from 'vuex-router-sync'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueAnimated from '@codekraft-studio/vue-animated'
-import firebase from '@/plugins/firebase'
+// import firebase from '@/plugins/firebase'
 import meta from '@/plugins/meta'
 import particles from '@/plugins/particles'
 
@@ -28,7 +29,7 @@ Vue.use(VueAnimated, {
   functional: true,
   defaultDuration: 2000
 })
-Vue.use(firebase)
+// Vue.use(firebase)
 sync(store, router)
 
 Vue.config.productionTip = false
