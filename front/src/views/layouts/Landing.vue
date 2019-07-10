@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page">
     <v-app dark id="app-layouts-landing" class="layouts-landing landing__wrapper tw-h-full tw-relative tw-bg-center tw-bg-no-repeat tw-bg-cover">
-      <GAppParticles />
+      <GAppParticles v-if="showParticles" />
       <g-app-content contentClass="pa-0 tw-relative tw-w-tw-h-full">
         <v-container fluid class="landing__showcase tw-h-screen tw-flex">
           <v-layout align-center justify-start column fill-height class="tw-flex">
@@ -21,7 +21,11 @@
           </v-layout>
         </v-container>
       </g-app-content>
-      </v-app>
+      <v-switch
+        class="tw-absolute tw-bottom-0 tw-right-0 tw-mr-2 particles-switch"
+        v-model="showParticles"
+        label="Show particles"></v-switch>
+    </v-app>
   </div>
 </template>
 
@@ -85,6 +89,7 @@ export default {
         },
         retina_detect: true
       },
+      showParticles: false,
       isVisible: false
     }
   },
@@ -127,5 +132,8 @@ export default {
       filter: opacity(0.2) blur(10px);
     }
   }
+}
+.particles-switch {
+  z-index: 1;
 }
 </style>

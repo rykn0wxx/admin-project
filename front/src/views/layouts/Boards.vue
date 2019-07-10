@@ -8,7 +8,7 @@
         </v-toolbar-items>
       </v-toolbar>
       <g-app-content contentClass="tw-h-full img-placeholder" wrapClass="tw-overflow-auto tw-px-6">
-        <GAppView class="tw-flex-noshrink view-wrapper tw-relative tw-block" />
+        <GAppView class="tw-flex-noshrink view-wrapper tw-relative tw-block tw-h-full" />
       </g-app-content>
     </v-app>
   </div>

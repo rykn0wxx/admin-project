@@ -4,7 +4,7 @@
       <GAppDrawer v-if="appDrawer" />
       <GAppToolbar v-if="appTopbar" />
       <g-app-content contentClass="tw-h-full img-placeholder" wrapClass="tw-overflow-auto">
-        <GAppView class="tw-flex-noshrink view-wrapper tw-relative tw-block tw-container-fluid" />
+        <GAppView class="tw-flex-noshrink view-wrapper tw-relative tw-block tw-h-full" />
       </g-app-content>
     </v-app>
   </div>

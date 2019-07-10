@@ -52,5 +52,10 @@ export default [
         icon: 'dashboard'
       }
     ]
+  }, {
+    path: '/welcome',
+    name: 'Welcome',
+    view: 'layouts/Welcome',
+    icons: 'home'
   }
 ]

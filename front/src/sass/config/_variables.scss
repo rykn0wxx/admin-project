@@ -5,7 +5,8 @@ $font-size:   10px;
 
 //-- Must be defined after $font-size and before variables that depend on the function.
 @function rem($multiplier) {
-  @return $multiplier * $font-size;
+  $f-size: 10px;
+  @return $multiplier * $f-size;
 }
 
 $display-4-font-size-base: rem(11.20);
