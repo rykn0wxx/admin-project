@@ -74,6 +74,13 @@ module.exports = {
       grow: '1 1 100%',
       nogrow: '0 1 auto',
       noshrink: '1 0 auto'
+    },
+    extend: {
+      maxWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%'
+      }
     }
   },
   variants: {},

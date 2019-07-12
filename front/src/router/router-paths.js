@@ -52,5 +52,9 @@ export default [
         icon: 'dashboard'
       }
     ]
+  }, {
+    path: '/layout-main',
+    name: 'Main',
+    view: 'layouts/LayoutMain'
   }
 ]

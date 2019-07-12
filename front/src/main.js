@@ -15,6 +15,7 @@ import VueAnimated from '@codekraft-studio/vue-animated'
 // import firebase from '@/plugins/firebase'
 import meta from '@/plugins/meta'
 import particles from '@/plugins/particles'
+import sidebar from '@/plugins/sidebar'
 
 // Application imports
 import App from './App'
@@ -23,6 +24,7 @@ import router from '@/router'
 import '@/components/global'
 
 // Application implementation
+Vue.use(sidebar)
 Vue.use(particles)
 Vue.use(VueAxios, axios)
 Vue.use(VueAnimated, {
