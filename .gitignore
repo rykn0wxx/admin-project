@@ -7,6 +7,8 @@ front/.env.*.local
 front/npm-debug.log*
 front/yarn-debug.log*
 front/yarn-error.log*
+front/yarn.lock
+/front/yarn.lock
 
 ### SERVER SIDE ###
 back/.bundle
