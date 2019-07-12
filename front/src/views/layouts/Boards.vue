@@ -2,7 +2,11 @@
   <div class="layouts-application flex layout-row tw-flex tw-max-w-full tw-max-h-full tw-overflow-hidden">
     <v-app dark class="layouts-app tw-w-full">
       <v-toolbar app dark class="app-toolbar glow-z1">
-        <v-toolbar-title>Boards</v-toolbar-title>
+        <v-toolbar-title>
+          <v-btn to="/app">
+            Boards
+          </v-btn>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items color="transparent">
         </v-toolbar-items>

@@ -2,24 +2,122 @@
   <v-container fluid class="pages-about">
     <div class="surface-container">
       <v-layout align-center justify-space-around row fill-height>
-        <div class="item elevation-5 dp01">dp01</div>
-        <div class="item elevation-5 dp02">dp02</div>
-        <div class="item elevation-5 dp03">dp03</div>
-        <div class="item elevation-5 dp04">dp04</div>
-        <div class="item elevation-5 dp05">dp05</div>
-        <div class="item elevation-5 dp06">dp06</div>
-        <div class="item elevation-5 dp08">dp08</div>
-        <div class="item elevation-5 dp12">dp12</div>
-        <div class="item elevation-5 dp16">dp16</div>
-        <div class="item elevation-5 dp24">dp24</div>
+        <div class="item elevation-5 dp01" v-bind:style="getStyledp01">
+          <input type="text" v-model="dp01" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp02">
+          <input type="text" v-model="dp02" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp03">
+          <input type="text" v-model="dp03" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp04">
+          <input type="text" v-model="dp04" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp05">
+          <input type="text" v-model="dp05" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp06">
+          <input type="text" v-model="dp06" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp08">
+          <input type="text" v-model="dp08" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp12">
+          <input type="text" v-model="dp12" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp16">
+          <input type="text" v-model="dp16" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
+        <div class="item elevation-5 dp24">
+          <input type="text" v-model="dp24" class="tw-inline-block tw-w-full tw-px-2" />
+        </div>
       </v-layout>
     </div>
+    <v-layout row>
+      <v-flex xs1>
+        <input type="text" v-model="dp01" class="tw-inline-block tw-w-full tw-px-2" />
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+  data () {
+    return {
+      dp01: '',
+      dp02: '',
+      dp03: '',
+      dp04: '',
+      dp05: '',
+      dp06: '',
+      dp08: '',
+      dp12: '',
+      dp16: '',
+      dp24: ''
+    }
+  },
+  computed: {
+    getStyledp01() {
+      return {
+        'background-color': `${this.dp01};`
+      }
+    },
+    getStyledp02() {
+      return {
+        'background-color': `${this.dp02};`
+      }
+    },
+    getStyledp03() {
+      return {
+        'background-color': `${this.dp03};`
+      }
+    },
+    getStyledp04() {
+      return {
+        'background-color': `${this.dp04};`
+      }
+    },
+    getStyledp05() {
+      return {
+        'background-color': `${this.dp05};`
+      }
+    },
+    getStyledp06() {
+      return {
+        'background-color': `${this.dp06};`
+      }
+    },
+    getStyledp08() {
+      return {
+        'background-color': `${this.dp08};`
+      }
+    },
+    getStyledp12() {
+      return {
+        'background-color': `${this.dp12};`
+      }
+    },
+    getStyledp16() {
+      return {
+        'background-color': `${this.dp16};`
+      }
+    },
+    getStyledp24() {
+      return {
+        'background-color': `${this.dp24};`
+      }
+    }
+  },
+  methods: {
+    getStyle (color) {
+      return {
+        'background-color': `${this[color]}px`
+      }
+    }
+  }
 }
 </script>
 

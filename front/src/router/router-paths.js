@@ -57,5 +57,9 @@ export default [
     name: 'Welcome',
     view: 'layouts/Welcome',
     icons: 'home'
+  }, {
+    path: '/layouts-main',
+    name: 'Main',
+    view: 'layouts/LayoutsMain'
   }
 ]

@@ -10,7 +10,7 @@
           <v-container fluid grid-list-lg class="tw-px-0 tw-py-4">
             <v-layout row wrap>
               <v-flex xs4 v-for="(kard, i) in kards" :key="i">
-                <v-card>
+                <v-card dark>
                   {{ kard }}
                 </v-card>
               </v-flex>
